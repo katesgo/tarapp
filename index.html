@@ -1,0 +1,1877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tara - Nurtured by Nature</title>
+    <meta name="description"
+        content="Handcrafted, plant-based skincare inspired by self-love and healing. Tara Holistic Beauty offers gentle, effective formulations for sensitive skin.">
+    <meta name="keywords"
+        content="natural skincare, sensitive skin, plant-based beauty, holistic skincare, handcrafted skincare, organic ingredients, Tara Holistic Beauty">
+    <meta name="author" content="Tara Holistic Beauty">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://taraholisticbeauty.com/">
+    <meta property="og:title" content="Tara - Nurtured by Nature">
+    <meta property="og:description" content="Handcrafted, plant-based skincare for sensitive souls.">
+    <meta property="og:image" content="https://taraholisticbeauty.com/postergirl1.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://taraholisticbeauty.com/">
+    <meta property="twitter:title" content="Tara - Nurtured by Nature">
+    <meta property="twitter:description" content="Handcrafted, plant-based skincare for sensitive souls.">
+    <meta property="twitter:image" content="https://taraholisticbeauty.com/postergirl1.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tara Holistic Beauty",
+      "url": "https://taraholisticbeauty.com",
+      "logo": "https://taraholisticbeauty.com/logosmall.png",
+      "sameAs": [
+        "https://www.instagram.com/taraholisticbeauty/"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Tara Intense Hydration Cream",
+        "image": "https://taraholisticbeauty.com/lotion.jpg",
+        "description": "All-natural lotion specially formulated for sensitive skin. Enriched with shea butter and coconut oil.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Tara Holistic Beauty"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://taraholisticbeauty.com/#products",
+          "priceCurrency": "CAD",
+          "price": "15.99",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Tara Deep Restorative Cream",
+        "image": "https://taraholisticbeauty.com/jar4.jpg",
+        "description": "Rich, restorative cream with Frankincense, myrrh, and dragon's blood for dry, cracked skin.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Tara Holistic Beauty"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://taraholisticbeauty.com/#products",
+          "priceCurrency": "CAD",
+          "price": "18.99",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Tara Floral Calm Solid Perfume",
+        "image": "https://taraholisticbeauty.com/jar3.jpg",
+        "description": "Soothing floral blend solid perfume made with nourishing beeswax and coconut oil.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Tara Holistic Beauty"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://taraholisticbeauty.com/#products",
+          "priceCurrency": "CAD",
+          "price": "9.99",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    ]
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #a3e5e4 0%, #93d8f5 50%, #b5b2f5 100%);
+        }
+
+        .lotus-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .ingredient-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .transition-slow {
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-[#b5b2f5]/80 backdrop-blur-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0">
+                    <img class="h-20" src="logosmall.png" alt="Tara Logo">
+                </div>
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="#home"
+                        class="text-gray-700 px-3 py-2 text-sm font-medium hover:text-[#93d8f5] transition-slow">Home</a>
+                    <a href="#about"
+                        class="text-gray-700 hover:text-[#93d8f5] px-3 py-2 text-sm font-medium transition-slow">About</a>
+                    <a href="#products"
+                        class="text-gray-700 hover:text-[#93d8f5] px-3 py-2 text-sm font-medium transition-slow">Products</a>
+                    <a href="#values"
+                        class="text-gray-700 hover:text-[#93d8f5] px-3 py-2 text-sm font-medium transition-slow">Our
+                        Values</a>
+                    <a href="#contact"
+                        class="text-gray-700 hover:text-[#93d8f5] px-3 py-2 text-sm font-medium transition-slow">Contact</a>
+                    <button id="cart-button-desktop"
+                        class="text-gray-700 hover:text-[#93d8f5] px-3 py-2 text-sm font-medium transition-slow relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span
+                            class="cart-count-badge absolute top-0 right-0 block h-4 w-4 transform -translate-y-1/2 translate-x-1/2 rounded-full ring-2 ring-white bg-red-500 text-white text-xs font-bold text-center leading-none hidden">0</span>
+                    </button>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-900 hover:bg-gray-100 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <button type="button" id="cart-button-mobile"
+                        class="ml-4 p-2 rounded-md text-gray-700 hover:text-blue-900 hover:bg-gray-100 focus:outline-none relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span
+                            class="cart-count-badge absolute top-0 right-0 block h-4 w-4 transform -translate-y-1/2 translate-x-1/2 rounded-full ring-2 ring-white bg-red-500 text-white text-xs font-bold text-center leading-none hidden">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-blue-900 hover:text-blue-700 hover:bg-gray-50">Home</a>
+                <a href="#about"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50">About</a>
+                <a href="#products"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50">Products</a>
+                <a href="#values"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50">Our
+                    Values</a>
+                <a href="#contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-900 hover:bg-gray-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <div class="mb-12 lg:mb-0">
+                    <h1 class="title-font text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-6">
+                        Nurtured by Nature
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-700 mb-8">
+                        Handcrafted, plant-based skincare inspired by self-love and healing. Gently formulated for
+                        sensitive skin that craves calm and balance.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#products"
+                            class="bg-blue-900 hover:bg-blue-800 text-white px-6 py-3 rounded-full text-center font-medium transition-slow">Discover
+                            Our Products</a>
+                        <a href="#about"
+                            class="border-2 border-blue-900 text-blue-900 hover:bg-blue-50 px-6 py-3 rounded-full text-center font-medium transition-slow">Our
+                            Story</a>
+                    </div>
+                </div>
+                <div class="relative flex justify-center">
+                    <div class="relative w-90 h-90">
+                        <div class="absolute inset-0 bg-white/30 rounded-full backdrop-blur-sm shadow-lg"></div>
+                        <img src="postergirl1.png" alt="Tara Product" class="relative w-full h-full object-contain">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <center>
+                <img src="labelcircle.png" width="300" height="300" class="relative z-10 object-contain">
+            </center>
+            <br><br>
+            <h2 class="title-font text-3xl md:text-4xl font-bold text-[#6e53be] mb-8">Pure. Simple. Effective.</h2>
+            <p class="text-gray-700 mb-8 text-lg max-w-3xl mx-auto">
+                <i>Tara combines nature's wisdom with minimalist design. Every element of our brand reflects our
+                    commitment to sustainability, purity, and gentle care for sensitive skin.</i>
+            </p>
+            <p>
+                Tara was born from a personal journey with sensitive skin and a deep appreciation for botanical
+                remedies. After years of struggling with commercial products,
+                our founder turned to traditional plant wisdom to create gentle,
+                effective formulations. Each product is handcrafted in small batches using organic,
+                wild-harvested ingredients that nurture both skin and spirit. We believe skincare should be simple,
+                pure,
+                and kind—to your skin and the planet.</p>
+            </p>
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-4 rounded-lg">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[#a3e5e4]/20 flex items-center justify-center"><i
+                            class="fas fa-leaf text-[#93d8f5] text-2xl"></i></div>
+                    <p class="text-sm text-gray-600">Plant-Based</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[#a3e5e4]/20 flex items-center justify-center"><i
+                            class="fas fa-recycle text-[#93d8f5] text-2xl"></i></div>
+                    <p class="text-sm text-gray-600">Sustainable</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[#a3e5e4]/20 flex items-center justify-center"><i
+                            class="fas fa-heart text-[#93d8f5] text-2xl"></i></div>
+                    <p class="text-sm text-gray-600">Gentle</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[#a3e5e4]/20 flex items-center justify-center"><i
+                            class="fas fa-seedling text-[#93d8f5] text-2xl"></i></div>
+                    <p class="text-sm text-gray-600">Minimalist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="title-font text-3xl md:text-4xl font-bold text-blue-900 mb-4">Nature's Finest Ingredients
+                </h2>
+                <p class="text-gray-700 max-w-3xl mx-auto">We carefully select only the purest botanical ingredients
+                    known for their healing properties. </p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="ingredient-card bg-white p-6 rounded-lg shadow-md text-center transition-slow">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center"><i
+                            class="fas fa-leaf text-blue-900 text-3xl"></i></div>
+                    <h3 class="font-semibold text-blue-900 mb-2">Shea Butter</h3>
+                    <p class="text-sm text-gray-600">Deeply moisturizing and anti-inflammatory</p>
+                </div>
+                <div class="ingredient-card bg-white p-6 rounded-lg shadow-md text-center transition-slow">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center"><i
+                            class="fas fa-leaf text-blue-900 text-3xl"></i></div>
+                    <h3 class="font-semibold text-blue-900 mb-2">Coconut Oil</h3>
+                    <p class="text-sm text-gray-600">Nourishes and protects the skin barrier</p>
+                </div>
+                <div class="ingredient-card bg-white p-6 rounded-lg shadow-md text-center transition-slow">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center"><i
+                            class="fas fa-leaf text-blue-900 text-3xl"></i></div>
+                    <h3 class="font-semibold text-blue-900 mb-2">Cocoa Butter</h3>
+                    <p class="text-sm text-gray-600">Rich in antioxidants and improves elasticity</p>
+                </div>
+                <div class="ingredient-card bg-white p-6 rounded-lg shadow-md text-center transition-slow">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center"><i
+                            class="fas fa-leaf text-blue-900 text-3xl"></i></div>
+                    <h3 class="font-semibold text-blue-900 mb-2">Beeswax</h3>
+                    <p class="text-sm text-gray-600">Locks moisture and forms a breathable barrier</p>
+                </div>
+                <div class="ingredient-card bg-white p-6 rounded-lg shadow-md text-center transition-slow">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-full bg-blue-100 flex items-center justify-center"><i
+                            class="fas fa-leaf text-blue-900 text-3xl"></i></div>
+                    <h3 class="font-semibold text-blue-900 mb-2">Castor Oil</h3>
+                    <p class="text-sm text-gray-600">Promotes healing and reduces inflammation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="title-font text-3xl md:text-4xl font-bold text-blue-900 mb-4">Our Signature Product</h2>
+                <p class="text-gray-700 max-w-3xl mx-auto">A simple, honest ritual that brings comfort, confidence, and
+                    glow to skin that deserves to feel good.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-8">
+                <div class="w-full lg:w-1/2 max-w-md">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-[#b5b2f5]/20 rounded-xl backdrop-blur-sm"></div><img
+                            src="new_lotion.jpg" alt="Tara Lotion" class="relative w-full h-full object-contain">
+                    </div>
+                    <p class="mt-4 text-sm text-gray-600 text-center italic">Ingredients: coconut oil, shea butter,
+                        cocoa butter, castor oil, walnut oil, beeswax, matcha powder.</p>
+                </div>
+                <div class="w-full lg:w-1/2 max-w-md flex flex-col justify-between">
+                    <div>
+                        <h3 class="title-font text-2xl font-bold text-blue-900 mb-2">Tara Intense Hydration Cream</h3>
+                        <p class="text-gray-700 mb-6">Our all-natural lotion is specially formulated for sensitive skin.
+                            Enriched with shea butter, coconut oil, and other healing botanicals, it provides deep
+                            hydration while soothing irritation.</p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-blue-900 mb-2">Key Benefits:</h4>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                <li>Calms redness and irritation</li>
+                                <li>Restores skin's moisture barrier</li>
+                                <li>Non-greasy, fast-absorbing formula</li>
+                                <li>Free from parabens, sulfates, and synthetic fragrances</li>
+                                <li>Vegan and cruelty-free</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center mb-4"><span
+                                class="text-2xl font-bold text-blue-900 mr-4">$21.99</span><span
+                                class="text-sm text-gray-500">(1.7 oz / 50 g)</span></div><button
+                            onclick="cart.addItem({id: 'lotion', name: 'Tara Intense Hydration Cream', price: 21.99, image: 'new_lotion.jpg'})"
+                            class="w-full bg-blue-900 hover:bg-blue-800 text-white py-3 rounded-full font-medium transition-slow">Add
+                            to Cart </button>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="title-font text-3xl md:text-4xl font-bold text-blue-900 mb-4">Our Intensive Anti-Inflammatory
+                    Cream </h2>
+                <p class="text-gray-700 max-w-3xl mx-auto">Experience the power of nature’s most sacred healers.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-8">
+                <div class="w-full lg:w-1/2 max-w-md">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-[#b5b2f5]/20 rounded-xl backdrop-blur-sm"></div><img
+                            src="new_cream.jpg" alt="Tara Lotion" height="300" width="500"
+                            class="relative object-contain">
+                    </div>
+                    <p class="mt-4 text-sm text-gray-600 text-center italic">Ingredients: cocoa butter, coconut oil,
+                        shea butter, sour cherry oil, moringa oil, kigelia oil, tree resin, hibiscus powder.</p>
+                </div>
+                <div class="w-full lg:w-1/2 max-w-md flex flex-col justify-between">
+                    <div>
+                        <h3 class="title-font text-2xl font-bold text-blue-900 mb-2">Tara Deep Restorative Cream</h3>
+                        <p class="text-gray-700 mb-6">This rich, restorative cream blends Frankincence, myrrh, and
+                            dragon's blood to create a protective barrier that locks in moisture and soothes dry,
+                            cracked, or irritated skin.</p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-blue-900 mb-2">Key Benefits:</h4>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                <li>Deeply nourishes and restores dry, damaged, or sensitive skin</li>
+                                <li>Infused with Dragon’s Blood resin to calm inflammation and support skin repair</li>
+                                <li>Frankincense & Myrrh promote healing, rejuvenation, and cellular renewal </li>
+                                <li>Creates a protective barrier to lock in moisture and shield against irritants</li>
+                                <li>100% natural, non-toxic, and gentle—crafted with purpose and purity</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center mb-4"><span
+                                class="text-2xl font-bold text-blue-900 mr-4">$27.99</span><span
+                                class="text-sm text-gray-500">(1.05 oz / 30 g)</span></div><button
+                            onclick="cart.addItem({id: 'cream', name: 'Tara Deep Restorative Cream', price: 27.99, image: 'new_cream.jpg'})"
+                            class="w-full bg-blue-900 hover:bg-blue-800 text-white py-3 rounded-full font-medium transition-slow">Add
+                            to Cart </button>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="title-font text-3xl md:text-4xl font-bold text-blue-900 mb-4">Our All-Natural Solid Perfume
+                </h2>
+                <p class="text-gray-700 max-w-3xl mx-auto">A gentle breath of calm and deep serenity, wherever you go.
+                </p>
+            </div>
+            <div class="flex flex-col lg:flex-row justify-center items-center lg:items-stretch gap-8">
+                <div class="w-full lg:w-1/2 max-w-md">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-[#b5b2f5]/20 rounded-xl backdrop-blur-sm"></div><img
+                            src="new_perfume.jpg" alt="Tara Lotion" height="300" width="500"
+                            class="relative object-contain">
+                    </div>
+                    <p class="mt-4 text-sm text-gray-600 text-center italic">Ingredients: coconut oil, beeswax,
+                        essential oils.</p>
+                </div>
+                <div class="w-full lg:w-1/2 max-w-md flex flex-col justify-between">
+                    <div>
+                        <h3 class="title-font text-2xl font-bold text-blue-900 mb-2">Tara Floral Calm Solid Perfume</h3>
+                        <p class="text-gray-700 mb-6">A soothing floral blend crafted to calm the senses and elevate
+                            your daily ritual. Made with nourishing beeswax and coconut oil, this pocket-sized perfume
+                            melts into skin, releasing a gentle, long-lasting scent.</p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-blue-900 mb-2">Key Benefits:</h4>
+                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                <li>Chamomile & Lavender to ease stress and invite calm</li>
+                                <li>Jasmine & Geranium for soft floral elegance and emotional balance</li>
+                                <li>Solid, alcohol-free formula for sensitive skin</li>
+                                <li>Travel-friendly and mess-free—perfect for moments of mindfulness on the go</li>
+                                <li>100% natural, non-toxic, and gentle—crafted with purpose and purity</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center mb-4"><span
+                                class="text-2xl font-bold text-blue-900 mr-4">$12.99</span><span
+                                class="text-sm text-gray-500">(0.35 oz / 10 g)</span></div><button
+                            onclick="cart.addItem({id: 'perfume', name: 'Tara Floral Calm Solid Perfume', price: 12.99, image: 'new_perfume.jpg'})"
+                            class="w-full bg-blue-900 hover:bg-blue-800 text-white py-3 rounded-full font-medium transition-slow">Add
+                            to Cart </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Values Section -->
+    <section id="values" class="py-16 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="title-font text-3xl md:text-4xl font-bold text-blue-900 mb-4">Our Core Values</h2>
+                <p class="text-gray-700 max-w-3xl mx-auto">These principles guide everything we do at Tara, from product
+                    formulation to customer care.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-slow">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4"><i
+                            class="fas fa-mountain text-blue-900 text-xl"></i></div>
+                    <h3 class="title-font text-xl font-semibold text-blue-900 mb-3">Rooted in Nature</h3>
+                    <p class="text-gray-700">Inspired by traditional botanicals and timeless wisdom—our products are
+                        crafted with love and intention.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-slow">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4"><i
+                            class="fas fa-hands-helping text-blue-900 text-xl"></i></div>
+                    <h3 class="title-font text-xl font-semibold text-blue-900 mb-3">Gentle for All</h3>
+                    <p class="text-gray-700">Formulated for sensitive, eczema-prone skin—because everyone deserves
+                        relief and glow, regardless of skin type.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-slow">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4"><i
+                            class="fas fa-eye text-blue-900 text-xl"></i></div>
+                    <h3 class="title-font text-xl font-semibold text-blue-900 mb-3">Transparency+Trust</h3>
+                    <p class="text-gray-700">You'll always know what's in our products and why they're there. We believe
+                        in honest, open communication with our community.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-slow">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4"><i
+                            class="fas fa-spa text-blue-900 text-xl"></i></div>
+                    <h3 class="title-font text-xl font-semibold text-blue-900 mb-3">Empowerment Through Ritual</h3>
+                    <p class="text-gray-700">We help people turn skincare into moments of peace, confidence, and
+                        connection—because how you care for yourself matters.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 hero-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="title-font text-3xl md:text-4xl font-bold text-blue-900 mb-6">Ready to
+                    Experience
+                    Nature's Healing Power?
+                </h2>
+                <p class="text-gray-700 mb-8 text-lg">Join us and transform your skincare routine with
+                    Tara's gentle, effective formulas.
+                </p><a href="#products"
+                    class="inline-block bg-blue-900 hover:bg-blue-800 text-white px-8 py-4 rounded-full text-lg font-medium transition-slow">Products
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12">
+                <div class="mb-12 lg:mb-0">
+                    <h2 class="title-font text-3xl md:text-4xl font-bold text-blue-900 mb-6">Get In
+                        Touch </h2>
+                    <p class="text-gray-700 mb-8">Have questions about our products or Pre-Launch
+                        orders? We'd love to hear from you!
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1"><i class="fas fa-envelope text-blue-900 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-blue-900">Email Us</h3>
+                                <p class="text-gray-700">taraholisticbeauty@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1"><i class="fas fa-phone-alt text-blue-900 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-blue-900">Call Us</h3>
+                                <p class="text-gray-700">(416) 700-5502</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1"><i class="fas fa-map-marker-alt text-blue-900 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-blue-900">Handmade in</h3>
+                                <p class="text-gray-700">Toronto, ON, Canada</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-lg font-medium text-blue-900 mb-4">Follow Us</h3>
+                        <div class="flex space-x-4"><a href="https://www.instagram.com/taraholisticbeauty/"
+                                class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-900 hover:bg-blue-200 transition-slow"><i
+                                    class="fab fa-instagram"></i></a><a href="#"
+                                class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-900 hover:bg-blue-200 transition-slow"><i
+                                    class="fab fa-facebook-f"></i></a><a href="#"
+                                class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-900 hover:bg-blue-200 transition-slow"><i
+                                    class="fab fa-pinterest-p"></i></a><a href="#"
+                                class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-900 hover:bg-blue-200 transition-slow"><i
+                                    class="fab fa-twitter"></i></a></div>
+                    </div>
+                </div>
+                <div>
+                    <form class="bg-blue-50 p-8 rounded-lg" action="https://formspree.io/f/mrblkjqo" method="POST">
+                        <div class="mb-6"><label for="name" class="block text-gray-700 font-medium mb-2">Your
+                                Name</label><input type="text" id="name"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-900 focus:outline-none focus:ring-1 focus:ring-blue-900">
+                        </div>
+                        <div class="mb-6"><label for="email" class="block text-gray-700 font-medium mb-2">Email
+                                Address</label><input type="email" name="email" id="email"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-900 focus:outline-none focus:ring-1 focus:ring-blue-900">
+                        </div>
+                        <div class="mb-6"><label for="subject"
+                                class="block text-gray-700 font-medium mb-2">Subject</label><input type="text"
+                                id="subject"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-900 focus:outline-none focus:ring-1 focus:ring-blue-900">
+                        </div>
+                        <div class="mb-6"><label for="message"
+                                class="block text-gray-700 font-medium mb-2">Message</label><textarea id="message"
+                                name="message" rows="4"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-900 focus:outline-none focus:ring-1 focus:ring-blue-900"></textarea>
+                        </div><button type="submit" value="Send Email"
+                            class="w-full bg-blue-900 hover:bg-blue-800 text-white py-3 px-6 rounded-full font-medium transition-slow">Send
+                            Message </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#93d8f5] text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="mb-8 md:mb-0">
+                    <img src="logosmall.png" alt="Tara Logo" class="h-10 mb-4">
+                    <p class="text-blue-100">
+                        Nurtured by Nature. Handcrafted, plant-based skincare for sensitive souls.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="title-font text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-blue-100 hover:text-white transition-slow">Home</a></li>
+                        <li><a href="#about" class="text-blue-100 hover:text-white transition-slow">About</a></li>
+                        <li><a href="#products" class="text-blue-100 hover:text-white transition-slow">Products</a></li>
+                        <li><a href="#values" class="text-blue-100 hover:text-white transition-slow">Our Values</a></li>
+                        <li><a href="#contact" class="text-blue-100 hover:text-white transition-slow">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="title-font text-lg font-semibold mb-4">Information</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-100 hover:text-white transition-slow">Shipping Policy</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white transition-slow">Returns & Refunds</a>
+                        </li>
+                        <li><a href="#" class="text-blue-100 hover:text-white transition-slow">Privacy Policy</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white transition-slow">Terms of Service</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white transition-slow">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+
+                    <style type="text/css">
+                        @import url("https://assets.mlcdn.com/fonts.css?version=1753713");
+                    </style>
+                    <style type="text/css">
+                        /* LOADER */
+                        .ml-form-embedSubmitLoad {
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        .g-recaptcha {
+                            transform: scale(1);
+                            -webkit-transform: scale(1);
+                            transform-origin: 0 0;
+                            -webkit-transform-origin: 0 0;
+                            height: ;
+                        }
+
+                        .sr-only {
+                            position: absolute;
+                            width: 1px;
+                            height: 1px;
+                            padding: 0;
+                            margin: -1px;
+                            overflow: hidden;
+                            clip: rect(0, 0, 0, 0);
+                            border: 0;
+                        }
+
+                        .ml-form-embedSubmitLoad:after {
+                            content: " ";
+                            display: block;
+                            width: 11px;
+                            height: 11px;
+                            margin: 1px;
+                            border-radius: 50%;
+                            border: 4px solid #fff;
+                            border-color: #ffffff #ffffff #ffffff transparent;
+                            animation: ml-form-embedSubmitLoad 1.2s linear infinite;
+                        }
+
+                        @keyframes ml-form-embedSubmitLoad {
+                            0% {
+                                transform: rotate(0deg);
+                            }
+
+                            100% {
+                                transform: rotate(360deg);
+                            }
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer {
+                            box-sizing: border-box;
+                            display: table;
+                            margin: 0 auto;
+                            position: static;
+                            width: 100% !important;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer h4,
+                        #mlb2-28968575.ml-form-embedContainer p,
+                        #mlb2-28968575.ml-form-embedContainer span,
+                        #mlb2-28968575.ml-form-embedContainer button {
+                            text-transform: none !important;
+                            letter-spacing: normal !important;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper {
+                            background-color: #93d8f5;
+
+                            border-width: 0px;
+                            border-color: transparent;
+                            border-radius: 4px;
+                            border-style: solid;
+                            box-sizing: border-box;
+                            display: inline-block !important;
+                            margin: 0;
+                            padding: 0;
+                            position: relative;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper.embedPopup,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper.embedDefault {
+                            width: 400px;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper.embedForm {
+                            max-width: 400px;
+                            width: 100%;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-align-left {
+                            text-align: left;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-align-center {
+                            text-align: center;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-align-default {
+                            display: table-cell !important;
+                            vertical-align: middle !important;
+                            text-align: center !important;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-align-right {
+                            text-align: right;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedHeader img {
+                            border-top-left-radius: 4px;
+                            border-top-right-radius: 4px;
+                            height: auto;
+                            margin: 0 auto !important;
+                            max-width: 100%;
+                            width: undefinedpx;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
+                            padding: 20px 20px 0 20px;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody.ml-form-embedBodyHorizontal {
+                            padding-bottom: 0;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent {
+                            text-align: left;
+                            margin: 0 0 20px 0;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
+                            color: #ffffff;
+                            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                            font-size: 18px;
+                            font-weight: 700;
+                            margin: 0 0 10px 0;
+                            text-align: left;
+                            word-break: break-word;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+                            color: #ffffff;
+                            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                            font-size: 12px;
+                            font-weight: 400;
+                            line-height: 18px;
+                            margin: 0 0 10px 0;
+                            text-align: left;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ul,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ul,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol {
+                            color: #ffffff;
+                            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                            font-size: 12px;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol {
+                            list-style-type: lower-alpha;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol ol,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol ol {
+                            list-style-type: lower-roman;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p a,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p a {
+                            color: #000000;
+                            text-decoration: underline;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group {
+                            text-align: left !important;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group label {
+                            margin-bottom: 5px;
+                            color: #333333;
+                            font-size: 10px;
+                            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                            font-weight: bold;
+                            font-style: normal;
+                            text-decoration: none;
+                            ;
+                            display: inline-block;
+                            line-height: 16px;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p:last-child,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p:last-child {
+                            margin: 0;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
+                            margin: 0;
+                            width: 100%;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+                            margin: 0 0 20px 0;
+                            width: 100%;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+                            float: left;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
+                            margin: 0;
+                            padding: 0 0 20px 0;
+                            width: 100%;
+                            height: auto;
+                            float: left;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
+                            margin: 0 0 10px 0;
+                            width: 100%;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item {
+                            margin: 0;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-formfieldHorizintal {
+                            margin: 0;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
+                            background-color: #ffffff !important;
+                            color: #333333 !important;
+                            border-color: #cccccc;
+                            border-radius: 4px !important;
+                            border-style: solid !important;
+                            border-width: 1px !important;
+                            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                            font-size: 12px !important;
+                            height: auto;
+                            line-height: 21px !important;
+                            margin-bottom: 0;
+                            margin-top: 0;
+                            margin-left: 0;
+                            margin-right: 0;
+                            padding: 10px 10px !important;
+                            width: 100% !important;
+                            box-sizing: border-box !important;
+                            max-width: 100% !important;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-webkit-input-placeholder,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-webkit-input-placeholder {
+                            color: #333333;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-moz-placeholder,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-moz-placeholder {
+                            color: #333333;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-ms-input-placeholder,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-ms-input-placeholder {
+                            color: #333333;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-moz-placeholder,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-moz-placeholder {
+                            color: #333333;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow textarea {
+                            background-color: #ffffff !important;
+                            color: #333333 !important;
+                            border-color: #cccccc;
+                            border-radius: 4px !important;
+                            border-style: solid !important;
+                            border-width: 1px !important;
+                            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                            font-size: 12px !important;
+                            height: auto;
+                            line-height: 21px !important;
+                            margin-bottom: 0;
+                            margin-top: 0;
+                            padding: 10px 10px !important;
+                            width: 100% !important;
+                            box-sizing: border-box !important;
+                            max-width: 100% !important;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+                            border-color: #cccccc !important;
+                            background-color: #ffffff !important;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input.custom-control-input[type="checkbox"] {
+                            box-sizing: border-box;
+                            padding: 0;
+                            position: absolute;
+                            z-index: -1;
+                            opacity: 0;
+                            margin-top: 5px;
+                            margin-left: -1.5rem;
+                            overflow: visible;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+                            border-radius: 4px !important;
+                        }
+
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::after,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::after,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::after {
+                            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after {
+                            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input:checked~.custom-control-label::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::before {
+                            border-color: #000000 !important;
+                            background-color: #000000 !important;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::after,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::after,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::after,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::after {
+                            top: 2px;
+                            box-sizing: border-box;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+                            top: 0px !important;
+                            box-sizing: border-box !important;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+                            top: 0px !important;
+                            box-sizing: border-box !important;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after {
+                            top: 0px !important;
+                            box-sizing: border-box !important;
+                            position: absolute;
+                            left: -1.5rem;
+                            display: block;
+                            width: 1rem;
+                            height: 1rem;
+                            content: "";
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before {
+                            top: 0px !important;
+                            box-sizing: border-box !important;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::before {
+                            position: absolute;
+                            top: 4px;
+                            left: -1.5rem;
+                            display: block;
+                            width: 16px;
+                            height: 16px;
+                            pointer-events: none;
+                            content: "";
+                            background-color: #ffffff;
+                            border: #adb5bd solid 1px;
+                            border-radius: 50%;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::after {
+                            position: absolute;
+                            top: 2px !important;
+                            left: -1.5rem;
+                            display: block;
+                            width: 1rem;
+                            height: 1rem;
+                            content: "";
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+                            position: absolute;
+                            top: 4px;
+                            left: -1.5rem;
+                            display: block;
+                            width: 16px;
+                            height: 16px;
+                            pointer-events: none;
+                            content: "";
+                            background-color: #ffffff;
+                            border: #adb5bd solid 1px;
+                            border-radius: 50%;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after {
+                            position: absolute;
+                            top: 0px !important;
+                            left: -1.5rem;
+                            display: block;
+                            width: 1rem;
+                            height: 1rem;
+                            content: "";
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+                            position: absolute;
+                            top: 0px !important;
+                            left: -1.5rem;
+                            display: block;
+                            width: 1rem;
+                            height: 1rem;
+                            content: "";
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-radio .custom-control-label::after {
+                            background: no-repeat 50%/50% 50%;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-checkbox .custom-control-label::after,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+                            background: no-repeat 50%/50% 50%;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-control,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-control {
+                            position: relative;
+                            display: block;
+                            min-height: 1.5rem;
+                            padding-left: 1.5rem;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input {
+                            position: absolute;
+                            z-index: -1;
+                            opacity: 0;
+                            box-sizing: border-box;
+                            padding: 0;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label {
+                            color: #000000;
+                            font-size: 12px !important;
+                            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                            line-height: 22px;
+                            margin-bottom: 0;
+                            position: relative;
+                            vertical-align: top;
+                            font-style: normal;
+                            font-weight: 700;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-select,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-select {
+                            background-color: #ffffff !important;
+                            color: #333333 !important;
+                            border-color: #cccccc;
+                            border-radius: 4px !important;
+                            border-style: solid !important;
+                            border-width: 1px !important;
+                            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                            font-size: 12px !important;
+                            line-height: 20px !important;
+                            margin-bottom: 0;
+                            margin-top: 0;
+                            padding: 10px 28px 10px 12px !important;
+                            width: 100% !important;
+                            box-sizing: border-box !important;
+                            max-width: 100% !important;
+                            height: auto;
+                            display: inline-block;
+                            vertical-align: middle;
+                            background: url('https://assets.mlcdn.com/ml/images/default/dropdown.svg') no-repeat right .75rem center/8px 10px;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                        }
+
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow {
+                            height: auto;
+                            width: 100%;
+                            float: left;
+                        }
+
+                        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal {
+                            width: 70%;
+                            float: left;
+                        }
+
+                        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal {
+                            width: 30%;
+                            float: left;
+                        }
+
+                        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal.labelsOn {
+                            padding-top: 21px;
+                        }
+
+                        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields {
+                            box-sizing: border-box;
+                            float: left;
+                            padding-right: 10px;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
+                            background-color: #ffffff;
+                            color: #333333;
+                            border-color: #cccccc;
+                            border-radius: 4px;
+                            border-style: solid;
+                            border-width: 1px;
+                            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                            font-size: 12px;
+                            line-height: 20px;
+                            margin-bottom: 0;
+                            margin-top: 0;
+                            padding: 10px 10px;
+                            width: 100%;
+                            box-sizing: border-box;
+                            overflow-y: initial;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button {
+                            background-color: #b5b2f5 !important;
+                            border-color: #b5b2f5;
+                            border-style: solid;
+                            border-width: 1px;
+                            border-radius: 4px;
+                            box-shadow: none;
+                            color: #ffffff !important;
+                            cursor: pointer;
+                            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                            font-size: 11px !important;
+                            font-weight: 700;
+                            line-height: 20px;
+                            margin: 0 !important;
+                            padding: 10px !important;
+                            width: 100%;
+                            height: auto;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:hover {
+                            background-color: #a3e5e4 !important;
+                            border-color: #a3e5e4 !important;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type="checkbox"] {
+                            box-sizing: border-box;
+                            padding: 0;
+                            position: absolute;
+                            z-index: -1;
+                            opacity: 0;
+                            margin-top: 5px;
+                            margin-left: -1.5rem;
+                            overflow: visible;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description {
+                            color: #000000;
+                            display: block;
+                            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                            font-size: 12px;
+                            text-align: left;
+                            margin-bottom: 0;
+                            position: relative;
+                            vertical-align: top;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label {
+                            font-weight: normal;
+                            margin: 0;
+                            padding: 0;
+                            position: relative;
+                            display: block;
+                            min-height: 24px;
+                            padding-left: 24px;
+
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label a {
+                            color: #000000;
+                            text-decoration: underline;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p {
+                            color: #000000 !important;
+                            font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
+                            font-size: 12px !important;
+                            font-weight: normal !important;
+                            line-height: 18px !important;
+                            padding: 0 !important;
+                            margin: 0 5px 0 0 !important;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p:last-child {
+                            margin: 0;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
+                            margin: 0 0 20px 0;
+                            float: left;
+                            width: 100%;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
+                            background-color: #b5b2f5 !important;
+                            border: none !important;
+                            border-radius: 4px !important;
+                            box-shadow: none !important;
+                            color: #ffffff !important;
+                            cursor: pointer;
+                            font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
+                            font-size: 11px !important;
+                            font-weight: 700 !important;
+                            line-height: 21px !important;
+                            height: auto;
+                            padding: 10px !important;
+                            width: 100% !important;
+                            box-sizing: border-box !important;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
+                            background-color: #a3e5e4 !important;
+                        }
+
+                        .ml-subscribe-close {
+                            width: 30px;
+                            height: 30px;
+                            background: url('https://assets.mlcdn.com/ml/images/default/modal_close.png') no-repeat;
+                            background-size: 30px;
+                            cursor: pointer;
+                            margin-top: -10px;
+                            margin-right: -10px;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                        }
+
+                        .ml-error input,
+                        .ml-error textarea,
+                        .ml-error select {
+                            border-color: red !important;
+                        }
+
+                        .ml-error .custom-checkbox-radio-list {
+                            border: 1px solid red !important;
+                            border-radius: 4px;
+                            padding: 10px;
+                        }
+
+                        .ml-error .label-description,
+                        .ml-error .label-description p,
+                        .ml-error .label-description p a,
+                        .ml-error label:first-child {
+                            color: #ff0000 !important;
+                        }
+
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p,
+                        #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p:first-letter {
+                            color: #ff0000 !important;
+                        }
+
+                        @media only screen and (max-width: 400px) {
+
+                            .ml-form-embedWrapper.embedDefault,
+                            .ml-form-embedWrapper.embedPopup {
+                                width: 100% !important;
+                            }
+
+                            .ml-form-formContent.horozintalForm {
+                                float: left !important;
+                            }
+
+                            .ml-form-formContent.horozintalForm .ml-form-horizontalRow {
+                                height: auto !important;
+                                width: 100% !important;
+                                float: left !important;
+                            }
+
+                            .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal {
+                                width: 100% !important;
+                            }
+
+                            .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal>div {
+                                padding-right: 0px !important;
+                                padding-bottom: 10px;
+                            }
+
+                            .ml-form-formContent.horozintalForm .ml-button-horizontal {
+                                width: 100% !important;
+                            }
+
+                            .ml-form-formContent.horozintalForm .ml-button-horizontal.labelsOn {
+                                padding-top: 0px !important;
+                            }
+
+                        }
+                    </style>
+
+                    <style type="text/css">
+                        .ml-mobileButton-horizontal {
+                            display: none;
+                        }
+
+                        #mlb2-28968575 .ml-mobileButton-horizontal button {
+
+                            background-color: #b5b2f5 !important;
+                            border-color: #b5b2f5 !important;
+                            border-style: solid !important;
+                            border-width: 1px !important;
+                            border-radius: 4px !important;
+                            box-shadow: none !important;
+                            color: #ffffff !important;
+                            cursor: pointer;
+                            font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
+                            font-size: 14px !important;
+                            font-weight: 700 !important;
+                            line-height: 20px !important;
+                            padding: 10px !important;
+                            width: 100% !important;
+
+                        }
+
+                        @media only screen and (max-width: 400px) {
+                            #mlb2-28968575.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
+                                padding: 0 0 10px 0 !important;
+                            }
+
+                            .ml-hide-horizontal {
+                                display: none !important;
+                            }
+
+                            .ml-form-formContent.horozintalForm .ml-button-horizontal {
+                                display: none !important;
+                            }
+
+                            .ml-mobileButton-horizontal {
+                                display: inline-block !important;
+                                margin-bottom: 20px;
+                                width: 100%;
+                            }
+
+                            .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal>div {
+                                padding-bottom: 0px !important;
+                            }
+                        }
+                    </style>
+                    <style type="text/css">
+                        @media only screen and (max-width: 400px) {
+                            .ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields {
+                                margin-bottom: 10px !important;
+                                width: 100% !important;
+                            }
+                        }
+                    </style>
+
+                    <div id="mlb2-28968575" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-28968575">
+                        <div class="ml-form-align-center ">
+                            <div class="ml-form-embedWrapper embedForm">
+
+
+
+
+                                <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
+
+                                    <div class="ml-form-embedContent" style=" ">
+
+                                        <h4>Newsletter</h4>
+                                        <p>Subscribe for skincare tips, exclusive offers, and updates.</p>
+
+                                    </div>
+
+                                    <form class="ml-block-form"
+                                        action="https://assets.mailerlite.com/jsonp/1699564/forms/161265669318378626/subscribe"
+                                        data-code="" method="post" target="_blank">
+
+
+                                        <div class="ml-form-formContent horozintalForm">
+                                            <div class="ml-form-horizontalRow">
+                                                <div class="ml-input-horizontal">
+
+
+                                                    <div style="width: 100%;" class="horizontal-fields">
+
+
+
+
+
+
+                                                        <div
+                                                            class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+
+                                                            <!-- input -->
+                                                            <input type="email" class="form-control" data-inputmask=""
+                                                                name="fields[email]" placeholder="Email"
+                                                                autocomplete="email">
+                                                            <!-- /input -->
+                                                        </div>
+
+
+
+                                                    </div>
+
+                                                </div>
+
+
+                                                <div class="ml-button-horizontal primary ">
+
+                                                    <button type="submit" class="primary">Subscribe</button>
+
+                                                    <button disabled="disabled" style="display: none;" type="button"
+                                                        class="loading">
+                                                        <div class="ml-form-embedSubmitLoad"></div>
+                                                        <span class="sr-only">Loading...</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Privacy policy -->
+
+                                        <!-- /Privacy policy -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <input type="hidden" name="ml-submit" value="1">
+
+
+
+                                        <div class="ml-mobileButton-horizontal">
+                                            <button type="submit" class="primary">Subscribe</button>
+                                            <button disabled="disabled" style="display: none;" type="button"
+                                                class="loading">
+                                                <div class="ml-form-embedSubmitLoad"></div>
+                                                <span class="sr-only">Loading...</span>
+                                            </button>
+                                        </div>
+                                        <input type="hidden" name="anticsrf" value="true">
+                                    </form>
+                                </div>
+
+                                <div class="ml-form-successBody row-success" style="display: none">
+
+                                    <div class="ml-form-successContent">
+
+                                        <h4>Thank you!</h4>
+
+                                        <p>You have successfully joined our subscriber list.</p>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <script>
+                        function ml_webform_success_28968575() {
+                            var $ = ml_jQuery || jQuery;
+                            $('.ml-subscribe-form-28968575 .row-success').show();
+                            $('.ml-subscribe-form-28968575 .row-form').hide();
+                        }
+                    </script>
+
+
+                    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"
+                        type="text/javascript"></script>
+                    <script>
+                        fetch("https://assets.mailerlite.com/jsonp/1699564/forms/161265669318378626/takel")
+                    </script>
+
+
+                </div>
+            </div>
+
+            <div class="border-t border-blue-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-blue-100 mb-4 md:mb-0">
+                    &copy; 2025 Tara Holistic Beauty. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-blue-100 hover:text-white transition-slow">
+                        <i class="fab fa-cc-visa text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-blue-100 hover:text-white transition-slow">
+                        <i class="fab fa-cc-mastercard text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-blue-100 hover:text-white transition-slow">
+                        <i class="fab fa-cc-amex text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-blue-100 hover:text-white transition-slow">
+                        <i class="fab fa-cc-paypal text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add shadow to navbar on scroll
+        window.addEventListener('scroll', function () {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="fixed inset-0 z-50 hidden" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+
+        <div class="fixed inset-0 overflow-hidden">
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+                    <div class="pointer-events-auto w-screen max-w-md">
+                        <div class="flex h-full flex-col overflow-hidden bg-white shadow-xl">
+                            <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+                                <div class="flex items-start justify-between">
+                                    <h2 class="text-lg font-medium text-gray-900" id="slide-over-title">
+                                        Shopping Cart</h2>
+                                    <div class="ml-3 flex h-7 items-center">
+                                        <button type="button" id="close-cart"
+                                            class="relative -m-2 p-2 text-gray-400 hover:text-gray-500">
+                                            <span class="absolute -inset-0.5"></span>
+                                            <span class="sr-only">Close panel</span>
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="mt-8">
+                                    <div class="flow-root">
+                                        <div id="cart-items" class="divide-y divide-gray-200">
+                                            <!-- Cart items will be injected here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border-t border-gray-200 px-4 py-6 sm:px-6">
+                                <div class="flex justify-between text-base font-medium text-gray-900 mb-4">
+                                    <p>Subtotal</p>
+                                    <p id="cart-total">$0.00</p>
+                                </div>
+                                <p class="mt-0.5 text-sm text-gray-500 mb-6">Shipping and taxes
+                                    calculated at checkout.</p>
+                                <div id="paypal-button-container"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- PayPal SDK -->
+            <script
+                src="https://www.paypal.com/sdk/js?client-id=AQusrRR8FDEWdWUX_JnDiVuXk4VB75ZjzJvtIvXIKLAVb6ToVHW3dzWzPgiFv8d0iXjYBOs2b9ykikyM&currency=CAD&locale=en_CA"></script>
+            <!-- Cart Logic -->
+            <script src="cart.js"></script>
+
+            <!-- Newsletter Popup -->
+            <div id="newsletter-popup" class="fixed inset-0 z-50 hidden" aria-labelledby="modal-title" role="dialog"
+                aria-modal="true">
+                <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+                <div class="fixed inset-0 z-10 overflow-y-auto">
+                    <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+                        <div
+                            class="relative transform overflow-hidden rounded-lg bg-[#93d8f5] text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                            <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                                <div class="absolute right-0 top-0 pr-4 pt-4">
+                                    <button type="button" id="close-newsletter"
+                                        class="rounded-md text-white hover:text-gray-100 focus:outline-none">
+                                        <span class="sr-only">Close</span>
+                                        <i class="fas fa-times text-xl"></i>
+                                    </button>
+                                </div>
+                                <div class="sm:flex sm:items-start">
+                                    <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left w-full">
+                                        <h3 class="text-2xl font-semibold leading-6 text-white mb-2" id="modal-title">
+                                            Join
+                                            our
+                                            Community</h3>
+                                        <div class="mt-2">
+                                            <p class="text-sm text-white mb-4">Subscribe to our newsletter for perks,
+                                                discounts,
+                                                and local events!</p>
+
+                                            <form
+                                                action="https://assets.mailerlite.com/jsonp/1699564/forms/161265669318378626/subscribe"
+                                                method="post" target="_blank" class="mt-4">
+                                                <div class="mb-4">
+                                                    <input type="email" name="fields[email]"
+                                                        placeholder="Enter your email"
+                                                        class="w-full px-4 py-3 rounded-lg border border-transparent focus:border-white focus:ring-2 focus:ring-white focus:outline-none text-gray-900"
+                                                        required>
+                                                </div>
+                                                <input type="hidden" name="ml-submit" value="1">
+                                                <input type="hidden" name="anticsrf" value="true">
+                                                <button type="submit"
+                                                    class="w-full bg-white text-[#93d8f5] font-bold py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+                                                    Subscribe
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const popup = document.getElementById('newsletter-popup');
+                    const closeBtn = document.getElementById('close-newsletter');
+
+                    // Check if user has already seen the popup
+                    const hasSeenPopup = localStorage.getItem('newsletter_popup_seen');
+
+                    if (!hasSeenPopup) {
+                        // Show popup after 3 seconds
+                        setTimeout(() => {
+                            popup.classList.remove('hidden');
+                        }, 3000);
+                    }
+
+                    // Close popup logic
+                    if (closeBtn) {
+                        closeBtn.addEventListener('click', () => {
+                            popup.classList.add('hidden');
+                            // Mark as seen
+                            localStorage.setItem('newsletter_popup_seen', 'true');
+                        });
+                    }
+
+                    // Close on click outside
+                    popup.addEventListener('click', (e) => {
+                        const modalContent = popup.querySelector('.relative');
+                        if (e.target === popup || e.target.contains(modalContent) && e.target !== modalContent) {
+                            // This check is a bit tricky with the overlay structure, 
+                            // but usually clicking the background (popup) should close it.
+                            // However, because of the structure, e.target might be the wrapper.
+                            // Let's just check if the click was NOT inside the modal content.
+                            // Actually, the background div is a sibling, but the wrapper covers the screen.
+                            // If e.target is popup (the fixed wrapper), it means we clicked outside the modal.
+                            if (e.target === popup) {
+                                popup.classList.add('hidden');
+                                localStorage.setItem('newsletter_popup_seen', 'true');
+                            }
+                        }
+                    });
+                });
+            </script>
+
+            <!-- TARA Assistant -->
+            <div id="tara-assistant-toggle"
+                style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background: #b5b2f5; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.15); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 9999; transition: transform 0.3s ease;">
+                <i class="fas fa-comment-dots" style="color: white; font-size: 28px;"></i>
+            </div>
+
+            <div id="tara-assistant-panel"
+                style="display: none; position: fixed; bottom: 90px; right: 20px; width: 350px; height: 500px; background: #ffffff; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); z-index: 9999; overflow: hidden; font-family: 'Poppins', sans-serif; border: 1px solid #e2e8f0;">
+                <div
+                    style="background: #b5b2f5; padding: 16px; color: white; font-weight: 600; display: flex; align-items: center; justify-content: space-between;">
+                    <span>TARA Assistant</span>
+                    <span style="font-size: 12px; opacity: 0.8;">Beta</span>
+                </div>
+                <div id="tara-log" style="height: 380px; overflow-y: auto; padding: 16px; background: #f8fafc;">
+                    <!-- Chat bubbles go here -->
+                </div>
+                <form id="tara-form"
+                    style="height: 60px; border-top: 1px solid #e2e8f0; display: flex; align-items: center; padding: 0 12px;">
+                    <input id="tara-input" type="text" placeholder="Ask about our products..."
+                        style="flex: 1; border: none; outline: none; padding: 8px; font-size: 14px; background: transparent;" />
+                    <button type="submit" style="background: none; border: none; cursor: pointer; color: #b5b2f5;">
+                        <i class="fas fa-paper-plane" style="font-size: 18px;"></i>
+                    </button>
+                </form>
+            </div>
+
+            <script>
+                const SYSTEM_PROMPT = "You are TARA, a helpful, friendly, and knowledgeable AI assistant for Tara Holistic Beauty. Your goal is to assist customers in finding the perfect skincare products for their needs, explaining the benefits of natural ingredients, and providing a warm, welcoming experience.\n\nKey Traits:\n- **Empathetic & Gentle:** Use soothing, kind language. Acknowledge skin concerns with sensitivity.\n- **Knowledgeable:** You know the Tara product line inside out (Intense Hydration Cream, Deep Restorative Cream, Floral Calm Solid Perfume). You understand the benefits of ingredients like shea butter, coconut oil, frankincense, myrrh, and dragon's blood.\n- **Concise:** Keep answers relatively short and easy to read.\n- **Sales-Supportive:** Gently guide users towards products that solve their problems, but don't be pushy.\n\nProduct Knowledge Base:\n1. **Tara Intense Hydration Cream ($21.99):**\n   - Best for: Sensitive skin, dryness, redness, daily moisturizing.\n   - Key Ingredients: Shea butter, coconut oil, cocoa butter, castor oil, walnut oil, beeswax, matcha powder.\n   - Benefits: Calms irritation, restores moisture barrier, non-greasy.\n\n2. **Tara Deep Restorative Cream ($27.99):**\n   - Best for: Very dry/cracked skin, eczema, inflammation, anti-aging, night treatment.\n   - Key Ingredients: Frankincense, myrrh, dragon's blood resin, cocoa butter, coconut oil, shea butter.\n   - Benefits: Deep healing, protective barrier, cellular renewal, anti-inflammatory.\n\n3. **Tara Floral Calm Solid Perfume ($12.99):**\n   - Best for: Aromatherapy, stress relief, on-the-go fragrance.\n   - Key Ingredients: Beeswax, coconut oil, essential oils (Chamomile, Lavender, Jasmine, Geranium).\n   - Benefits: Calming, grounding, alcohol-free, travel-friendly.\n\nCommon User Questions & Answers:\n- *\"Which cream is better for acne?\"* -> Suggest the Intense Hydration Cream for its lighter texture and soothing properties, or mention that the Deep Restorative Cream's frankincense has antibacterial properties but is richer.\n- *\"Is it vegan?\"* -> The creams contain beeswax, so they are not strictly vegan, but they are 100% natural and cruelty-free.\n- *\"Do you ship internationally?\"* -> Currently, we focus on shipping within Canada/USA (adjust based on actual policy if known, otherwise say \"Please check our shipping policy page\").\n\nTone Example:\nUser: \"My skin is really dry and itchy.\"\nTARA: \"I'm sorry to hear that! Dryness can be so uncomfortable. For deep relief, I'd recommend our **Deep Restorative Cream**. It's rich in Dragon's Blood and Frankincense to soothe inflammation and lock in moisture. Would you like to know more about its ingredients?\"";
+
+                const el = {
+                    toggle: document.getElementById('tara-assistant-toggle'),
+                    panel: document.getElementById('tara-assistant-panel'),
+                    log: document.getElementById('tara-log'),
+                    form: document.getElementById('tara-form'),
+                    input: document.getElementById('tara-input')
+                };
+
+                let messages = [{ role: 'system', content: SYSTEM_PROMPT }];
+
+                function addBubble(text, who = 'assistant') {
+                    const wrap = document.createElement('div');
+                    wrap.style.margin = '8px 0';
+                    wrap.style.display = 'flex';
+                    wrap.style.justifyContent = who === 'assistant' ? 'flex-start' : 'flex-end';
+                    const b = document.createElement('div');
+                    b.textContent = text;
+                    b.style.maxWidth = '78%';
+                    b.style.padding = '10px 12px';
+                    b.style.borderRadius = '12px';
+                    b.style.background = who === 'assistant' ? '#ffffff' : '#e2e8f0';
+                    b.style.boxShadow = '0 2px 8px rgba(0,0,0,.06)';
+                    wrap.appendChild(b);
+                    el.log.appendChild(wrap);
+                    el.log.scrollTop = el.log.scrollHeight;
+                }
+
+                el.toggle.onclick = () => {
+                    el.panel.style.display = el.panel.style.display === 'none' ? 'block' : 'none';
+                    if (el.panel.style.display === 'block' && el.log.childElementCount === 0) {
+                        addBubble('Hi! I’m TARA Assistant. Want help choosing between our Everyday Skin Butter and Resin Repair Cream?');
+                    }
+                };
+
+                el.form.onsubmit = async (e) => {
+                    e.preventDefault();
+                    const q = el.input.value.trim();
+                    if (!q) return;
+                    el.input.value = '';
+                    messages.push({ role: 'user', content: q });
+                    addBubble(q, 'user');
+                    addBubble('…', 'assistant'); // typing indicator
+                    try {
+                        const res = await fetch('/chat', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ messages })
+                        });
+                        const data = await res.json(); // {reply: "...", messages:[...]} — shape your backend returns
+                        // remove last typing bubble
+                        el.log.removeChild(el.log.lastChild);
+                        addBubble(data.reply || 'Sorry, I could not get a response.');
+                        messages = data.messages || messages.concat({ role: 'assistant', content: data.reply });
+                    } catch (err) {
+                        el.log.removeChild(el.log.lastChild);
+                        addBubble('Sorry—something went wrong. Please try again or email support@taraholistic.beauty.');
+                    }
+                };
+            </script>
+
+</body>
+
+</html>
