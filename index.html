@@ -1581,296 +1581,219 @@
                         <i class="fab fa-cc-visa text-2xl"></i>
                     </a>
                     <a href="#" class="text-blue-100 hover:text-white transition-slow">
-                        <i class="fab fa-cc-mastercard text-2xl"></i>
-                    </a>
-                    <a href="#" class="text-blue-100 hover:text-white transition-slow">
-                        <i class="fab fa-cc-amex text-2xl"></i>
-                    </a>
-                    <a href="#" class="text-blue-100 hover:text-white transition-slow">
-                        <i class="fab fa-cc-paypal text-2xl"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-    <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function () {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
+                        <script>
+                            // Mobile menu toggle
+                            document.getElementById('mobile-menu-button').addEventListener('click', function () {
+                                const menu = document.getElementById('mobile-menu');
+                                menu.classList.toggle('hidden');
+                            });
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+                            // Smooth scrolling for anchor links
+                            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                                anchor.addEventListener('click', function (e) {
+                                    e.preventDefault();
 
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
+                                    const targetId = this.getAttribute('href');
+                                    const targetElement = document.querySelector(targetId);
 
-                if (targetElement) {
-                    // Close mobile menu if open
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
+                                    if (targetElement) {
+                                        // Close mobile menu if open
+                                        const mobileMenu = document.getElementById('mobile-menu');
+                                        if (!mobileMenu.classList.contains('hidden')) {
+                                            mobileMenu.classList.add('hidden');
+                                        }
 
-                    // Scroll to target
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+                                        // Scroll to target
+                                        window.scrollTo({
+                                            top: targetElement.offsetTop - 80,
+                                            behavior: 'smooth'
+                                        });
+                                    }
+                                });
+                            });
 
-        // Add shadow to navbar on scroll
-        window.addEventListener('scroll', function () {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 10) {
-                nav.classList.add('shadow-lg');
-            } else {
-                nav.classList.remove('shadow-lg');
-            }
-        });
-    </script>
+                            // Add shadow to navbar on scroll
+                            window.addEventListener('scroll', function () {
+                                const nav = document.querySelector('nav');
+                                if (window.scrollY > 10) {
+                                    nav.classList.add('shadow-lg');
+                                } else {
+                                    nav.classList.remove('shadow-lg');
+                                }
+                            });
+                        </script>
 
-    <!-- Cart Modal -->
-    <div id="cart-modal" class="fixed inset-0 z-50 hidden" aria-labelledby="modal-title" role="dialog"
-        aria-modal="true">
-        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+                        <!-- Cart Modal -->
+                        <div id="cart-modal" class="fixed inset-0 z-50 hidden" aria-labelledby="modal-title"
+                            role="dialog" aria-modal="true">
+                            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
-        <div class="fixed inset-0 overflow-hidden">
-            <div class="absolute inset-0 overflow-hidden">
-                <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-                    <div class="pointer-events-auto w-screen max-w-md">
-                        <div class="flex h-full flex-col overflow-hidden bg-white shadow-xl">
-                            <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
-                                <div class="flex items-start justify-between">
-                                    <h2 class="text-lg font-medium text-gray-900" id="slide-over-title">
-                                        Shopping Cart</h2>
-                                    <div class="ml-3 flex h-7 items-center">
-                                        <button type="button" id="close-cart"
-                                            class="relative -m-2 p-2 text-gray-400 hover:text-gray-500">
-                                            <span class="absolute -inset-0.5"></span>
-                                            <span class="sr-only">Close panel</span>
-                                            <i class="fas fa-times"></i>
-                                        </button>
-                                    </div>
-                                </div>
+                            <div class="fixed inset-0 overflow-hidden">
+                                <div class="absolute inset-0 overflow-hidden">
+                                    <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+                                        <div class="pointer-events-auto w-screen max-w-md">
+                                            <div class="flex h-full flex-col overflow-hidden bg-white shadow-xl">
+                                                <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+                                                    <div class="flex items-start justify-between">
+                                                        <h2 class="text-lg font-medium text-gray-900"
+                                                            id="slide-over-title">
+                                                            Shopping Cart</h2>
+                                                        <div class="ml-3 flex h-7 items-center">
+                                                            <button type="button" id="close-cart"
+                                                                class="relative -m-2 p-2 text-gray-400 hover:text-gray-500">
+                                                                <span class="absolute -inset-0.5"></span>
+                                                                <span class="sr-only">Close panel</span>
+                                                                <i class="fas fa-times"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
 
-                                <div class="mt-8">
-                                    <div class="flow-root">
-                                        <div id="cart-items" class="divide-y divide-gray-200">
-                                            <!-- Cart items will be injected here -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="border-t border-gray-200 px-4 py-6 sm:px-6">
-                                <div class="flex justify-between text-base font-medium text-gray-900 mb-4">
-                                    <p>Subtotal</p>
-                                    <p id="cart-total">$0.00</p>
-                                </div>
-                                <p class="mt-0.5 text-sm text-gray-500 mb-6">Shipping and taxes
-                                    calculated at checkout.</p>
-                                <div id="paypal-button-container"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- PayPal SDK -->
-            <script
-                src="https://www.paypal.com/sdk/js?client-id=AQusrRR8FDEWdWUX_JnDiVuXk4VB75ZjzJvtIvXIKLAVb6ToVHW3dzWzPgiFv8d0iXjYBOs2b9ykikyM&currency=CAD&locale=en_CA"></script>
-            <!-- Cart Logic -->
-            <script src="cart.js"></script>
-
-            <!-- Newsletter Popup -->
-            <div id="newsletter-popup" class="fixed inset-0 z-50 hidden" aria-labelledby="modal-title" role="dialog"
-                aria-modal="true">
-                <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
-                <div class="fixed inset-0 z-10 overflow-y-auto">
-                    <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
-                        <div
-                            class="relative transform overflow-hidden rounded-lg bg-[#93d8f5] text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                            <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                                <div class="absolute right-0 top-0 pr-4 pt-4">
-                                    <button type="button" id="close-newsletter"
-                                        class="rounded-md text-white hover:text-gray-100 focus:outline-none">
-                                        <span class="sr-only">Close</span>
-                                        <i class="fas fa-times text-xl"></i>
-                                    </button>
-                                </div>
-                                <div class="sm:flex sm:items-start">
-                                    <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left w-full">
-                                        <h3 class="text-2xl font-semibold leading-6 text-white mb-2" id="modal-title">
-                                            Join
-                                            our
-                                            Community</h3>
-                                        <div class="mt-2">
-                                            <p class="text-sm text-white mb-4">Subscribe to our newsletter for perks,
-                                                discounts,
-                                                and local events!</p>
-
-                                            <form
-                                                action="https://assets.mailerlite.com/jsonp/1699564/forms/161265669318378626/subscribe"
-                                                method="post" target="_blank" class="mt-4">
-                                                <div class="mb-4">
-                                                    <input type="email" name="fields[email]"
-                                                        placeholder="Enter your email"
-                                                        class="w-full px-4 py-3 rounded-lg border border-transparent focus:border-white focus:ring-2 focus:ring-white focus:outline-none text-gray-900"
-                                                        required>
+                                                    <div class="mt-8">
+                                                        <div class="flow-root">
+                                                            <div id="cart-items" class="divide-y divide-gray-200">
+                                                                <!-- Cart items will be injected here -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <input type="hidden" name="ml-submit" value="1">
-                                                <input type="hidden" name="anticsrf" value="true">
-                                                <button type="submit"
-                                                    class="w-full bg-white text-[#93d8f5] font-bold py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-                                                    Subscribe
-                                                </button>
-                                            </form>
+
+                                                <div class="border-t border-gray-200 px-4 py-6 sm:px-6">
+                                                    <div
+                                                        class="flex justify-between text-base font-medium text-gray-900 mb-4">
+                                                        <p>Subtotal</p>
+                                                        <p id="cart-total">$0.00</p>
+                                                    </div>
+                                                    <p class="mt-0.5 text-sm text-gray-500 mb-6">Shipping and taxes
+                                                        calculated at checkout.</p>
+                                                    <div id="paypal-button-container"></div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                <!-- PayPal SDK -->
+                                <script
+                                    src="https://www.paypal.com/sdk/js?client-id=AQusrRR8FDEWdWUX_JnDiVuXk4VB75ZjzJvtIvXIKLAVb6ToVHW3dzWzPgiFv8d0iXjYBOs2b9ykikyM&currency=CAD&locale=en_CA"></script>
+                                <!-- Cart Logic -->
+                                <script src="cart.js"></script>
 
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    const popup = document.getElementById('newsletter-popup');
-                    const closeBtn = document.getElementById('close-newsletter');
+                                <!-- Newsletter Popup -->
+                                <div id="newsletter-popup" class="fixed inset-0 z-50 hidden"
+                                    aria-labelledby="modal-title" role="dialog" aria-modal="true">
+                                    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+                                    <div class="fixed inset-0 z-10 overflow-y-auto">
+                                        <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+                                            <div
+                                                class="relative transform overflow-hidden rounded-lg bg-[#93d8f5] text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                                                <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                                                    <div class="absolute right-0 top-0 pr-4 pt-4">
+                                                        <button type="button" id="close-newsletter"
+                                                            class="rounded-md text-white hover:text-gray-100 focus:outline-none">
+                                                            <span class="sr-only">Close</span>
+                                                            <i class="fas fa-times text-xl"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="sm:flex sm:items-start">
+                                                        <div
+                                                            class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left w-full">
+                                                            <h3 class="text-2xl font-semibold leading-6 text-white mb-2"
+                                                                id="modal-title">
+                                                                Join
+                                                                our
+                                                                Community</h3>
+                                                            <div class="mt-2">
+                                                                <i class="fas fa-comment-dots"
+                                                                    style="color: white; font-size: 28px;"></i>
+                                                            </div>
 
-                    // Check if user has already seen the popup
-                    const hasSeenPopup = localStorage.getItem('newsletter_popup_seen');
+                                                            <div id="tara-assistant-panel"
+                                                                style="display: none; position: fixed; bottom: 90px; right: 20px; width: 350px; height: 500px; background: #ffffff; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); z-index: 9999; overflow: hidden; font-family: 'Poppins', sans-serif; border: 1px solid #e2e8f0;">
+                                                                <div
+                                                                    style="background: #b5b2f5; padding: 16px; color: white; font-weight: 600; display: flex; align-items: center; justify-content: space-between;">
+                                                                    <span>TARA Assistant</span>
+                                                                    <span
+                                                                        style="font-size: 12px; opacity: 0.8;">Beta</span>
+                                                                </div>
+                                                                <div id="tara-log"
+                                                                    style="height: 380px; overflow-y: auto; padding: 16px; background: #f8fafc;">
+                                                                    <!-- Chat bubbles go here -->
+                                                                </div>
+                                                                <form id="tara-form"
+                                                                    style="height: 60px; border-top: 1px solid #e2e8f0; display: flex; align-items: center; padding: 0 12px;">
+                                                                    <input id="tara-input" type="text"
+                                                                        placeholder="Ask about our products..."
+                                                                        style="flex: 1; border: none; outline: none; padding: 8px; font-size: 14px; background: transparent;" />
+                                                                    <button type="submit"
+                                                                        style="background: none; border: none; cursor: pointer; color: #b5b2f5;">
+                                                                        <i class="fas fa-paper-plane"
+                                                                            style="font-size: 18px;"></i>
+                                                                    </button>
+                                                                </form>
+                                                            </div>
 
-                    if (!hasSeenPopup) {
-                        // Show popup after 3 seconds
-                        setTimeout(() => {
-                            popup.classList.remove('hidden');
-                        }, 3000);
-                    }
+                                                            <script>
+                                                                const SYSTEM_PROMPT = "You are TARA, a helpful, friendly, and knowledgeable AI assistant for Tara Holistic Beauty. Your goal is to assist customers in finding the perfect skincare products for their needs, explaining the benefits of natural ingredients, and providing a warm, welcoming experience.\n\nKey Traits:\n- **Empathetic & Gentle:** Use soothing, kind language. Acknowledge skin concerns with sensitivity.\n- **Knowledgeable:** You know the Tara product line inside out (Intense Hydration Cream, Deep Restorative Cream, Floral Calm Solid Perfume). You understand the benefits of ingredients like shea butter, coconut oil, frankincense, myrrh, and dragon's blood.\n- **Concise:** Keep answers relatively short and easy to read.\n- **Sales-Supportive:** Gently guide users towards products that solve their problems, but don't be pushy.\n\nProduct Knowledge Base:\n1. **Tara Intense Hydration Cream ($21.99):**\n   - Best for: Sensitive skin, dryness, redness, daily moisturizing.\n   - Key Ingredients: Shea butter, coconut oil, cocoa butter, castor oil, walnut oil, beeswax, matcha powder.\n   - Benefits: Calms irritation, restores moisture barrier, non-greasy.\n\n2. **Tara Deep Restorative Cream ($27.99):**\n   - Best for: Very dry/cracked skin, eczema, inflammation, anti-aging, night treatment.\n   - Key Ingredients: Frankincense, myrrh, dragon's blood resin, cocoa butter, coconut oil, shea butter.\n   - Benefits: Deep healing, protective barrier, cellular renewal, anti-inflammatory.\n\n3. **Tara Floral Calm Solid Perfume ($12.99):**\n   - Best for: Aromatherapy, stress relief, on-the-go fragrance.\n   - Key Ingredients: Beeswax, coconut oil, essential oils (Chamomile, Lavender, Jasmine, Geranium).\n   - Benefits: Calming, grounding, alcohol-free, travel-friendly.\n\nCommon User Questions & Answers:\n- *\"Which cream is better for acne?\"* -> Suggest the Intense Hydration Cream for its lighter texture and soothing properties, or mention that the Deep Restorative Cream's frankincense has antibacterial properties but is richer.\n- *\"Is it vegan?\"* -> The creams contain beeswax, so they are not strictly vegan, but they are 100% natural and cruelty-free.\n- *\"Do you ship internationally?\"* -> Currently, we focus on shipping within Canada/USA (adjust based on actual policy if known, otherwise say \"Please check our shipping policy page\").\n\nTone Example:\nUser: \"My skin is really dry and itchy.\"\nTARA: \"I'm sorry to hear that! Dryness can be so uncomfortable. For deep relief, I'd recommend our **Deep Restorative Cream**. It's rich in Dragon's Blood and Frankincense to soothe inflammation and lock in moisture. Would you like to know more about its ingredients?\"";
 
-                    // Close popup logic
-                    if (closeBtn) {
-                        closeBtn.addEventListener('click', () => {
-                            popup.classList.add('hidden');
-                            // Mark as seen
-                            localStorage.setItem('newsletter_popup_seen', 'true');
-                        });
-                    }
+                                                                const el = {
+                                                                    toggle: document.getElementById('tara-assistant-toggle'),
+                                                                    panel: document.getElementById('tara-assistant-panel'),
+                                                                    log: document.getElementById('tara-log'),
+                                                                    form: document.getElementById('tara-form'),
+                                                                    input: document.getElementById('tara-input')
+                                                                };
 
-                    // Close on click outside
-                    popup.addEventListener('click', (e) => {
-                        const modalContent = popup.querySelector('.relative');
-                        if (e.target === popup || e.target.contains(modalContent) && e.target !== modalContent) {
-                            // This check is a bit tricky with the overlay structure, 
-                            // but usually clicking the background (popup) should close it.
-                            // However, because of the structure, e.target might be the wrapper.
-                            // Let's just check if the click was NOT inside the modal content.
-                            // Actually, the background div is a sibling, but the wrapper covers the screen.
-                            // If e.target is popup (the fixed wrapper), it means we clicked outside the modal.
-                            if (e.target === popup) {
-                                popup.classList.add('hidden');
-                                localStorage.setItem('newsletter_popup_seen', 'true');
-                            }
-                        }
-                    });
-                });
-            </script>
+                                                                let messages = [{ role: 'system', content: SYSTEM_PROMPT }];
 
-            <!-- TARA Assistant -->
-            <div id="tara-assistant-toggle"
-                style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background: #b5b2f5; border-radius: 50%; box-shadow: 0 4px 12px rgba(0,0,0,0.15); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 9999; transition: transform 0.3s ease;">
-                <i class="fas fa-comment-dots" style="color: white; font-size: 28px;"></i>
-            </div>
+                                                                function addBubble(text, who = 'assistant') {
+                                                                    const wrap = document.createElement('div');
+                                                                    wrap.style.margin = '8px 0';
+                                                                    wrap.style.display = 'flex';
+                                                                    wrap.style.justifyContent = who === 'assistant' ? 'flex-start' : 'flex-end';
+                                                                    const b = document.createElement('div');
+                                                                    b.textContent = text;
+                                                                    b.style.maxWidth = '78%';
+                                                                    b.style.padding = '10px 12px';
+                                                                    b.style.borderRadius = '12px';
+                                                                    b.style.background = who === 'assistant' ? '#ffffff' : '#e2e8f0';
+                                                                    b.style.boxShadow = '0 2px 8px rgba(0,0,0,.06)';
+                                                                    wrap.appendChild(b);
+                                                                    el.log.appendChild(wrap);
+                                                                    el.log.scrollTop = el.log.scrollHeight;
+                                                                }
 
-            <div id="tara-assistant-panel"
-                style="display: none; position: fixed; bottom: 90px; right: 20px; width: 350px; height: 500px; background: #ffffff; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); z-index: 9999; overflow: hidden; font-family: 'Poppins', sans-serif; border: 1px solid #e2e8f0;">
-                <div
-                    style="background: #b5b2f5; padding: 16px; color: white; font-weight: 600; display: flex; align-items: center; justify-content: space-between;">
-                    <span>TARA Assistant</span>
-                    <span style="font-size: 12px; opacity: 0.8;">Beta</span>
-                </div>
-                <div id="tara-log" style="height: 380px; overflow-y: auto; padding: 16px; background: #f8fafc;">
-                    <!-- Chat bubbles go here -->
-                </div>
-                <form id="tara-form"
-                    style="height: 60px; border-top: 1px solid #e2e8f0; display: flex; align-items: center; padding: 0 12px;">
-                    <input id="tara-input" type="text" placeholder="Ask about our products..."
-                        style="flex: 1; border: none; outline: none; padding: 8px; font-size: 14px; background: transparent;" />
-                    <button type="submit" style="background: none; border: none; cursor: pointer; color: #b5b2f5;">
-                        <i class="fas fa-paper-plane" style="font-size: 18px;"></i>
-                    </button>
-                </form>
-            </div>
+                                                                el.toggle.onclick = () => {
+                                                                    el.panel.style.display = el.panel.style.display === 'none' ? 'block' : 'none';
+                                                                    if (el.panel.style.display === 'block' && el.log.childElementCount === 0) {
+                                                                        addBubble('Hi! I’m TARA Assistant. Want help choosing between our Everyday Skin Butter and Resin Repair Cream?');
+                                                                    }
+                                                                };
 
-            <script>
-                const SYSTEM_PROMPT = "You are TARA, a helpful, friendly, and knowledgeable AI assistant for Tara Holistic Beauty. Your goal is to assist customers in finding the perfect skincare products for their needs, explaining the benefits of natural ingredients, and providing a warm, welcoming experience.\n\nKey Traits:\n- **Empathetic & Gentle:** Use soothing, kind language. Acknowledge skin concerns with sensitivity.\n- **Knowledgeable:** You know the Tara product line inside out (Intense Hydration Cream, Deep Restorative Cream, Floral Calm Solid Perfume). You understand the benefits of ingredients like shea butter, coconut oil, frankincense, myrrh, and dragon's blood.\n- **Concise:** Keep answers relatively short and easy to read.\n- **Sales-Supportive:** Gently guide users towards products that solve their problems, but don't be pushy.\n\nProduct Knowledge Base:\n1. **Tara Intense Hydration Cream ($21.99):**\n   - Best for: Sensitive skin, dryness, redness, daily moisturizing.\n   - Key Ingredients: Shea butter, coconut oil, cocoa butter, castor oil, walnut oil, beeswax, matcha powder.\n   - Benefits: Calms irritation, restores moisture barrier, non-greasy.\n\n2. **Tara Deep Restorative Cream ($27.99):**\n   - Best for: Very dry/cracked skin, eczema, inflammation, anti-aging, night treatment.\n   - Key Ingredients: Frankincense, myrrh, dragon's blood resin, cocoa butter, coconut oil, shea butter.\n   - Benefits: Deep healing, protective barrier, cellular renewal, anti-inflammatory.\n\n3. **Tara Floral Calm Solid Perfume ($12.99):**\n   - Best for: Aromatherapy, stress relief, on-the-go fragrance.\n   - Key Ingredients: Beeswax, coconut oil, essential oils (Chamomile, Lavender, Jasmine, Geranium).\n   - Benefits: Calming, grounding, alcohol-free, travel-friendly.\n\nCommon User Questions & Answers:\n- *\"Which cream is better for acne?\"* -> Suggest the Intense Hydration Cream for its lighter texture and soothing properties, or mention that the Deep Restorative Cream's frankincense has antibacterial properties but is richer.\n- *\"Is it vegan?\"* -> The creams contain beeswax, so they are not strictly vegan, but they are 100% natural and cruelty-free.\n- *\"Do you ship internationally?\"* -> Currently, we focus on shipping within Canada/USA (adjust based on actual policy if known, otherwise say \"Please check our shipping policy page\").\n\nTone Example:\nUser: \"My skin is really dry and itchy.\"\nTARA: \"I'm sorry to hear that! Dryness can be so uncomfortable. For deep relief, I'd recommend our **Deep Restorative Cream**. It's rich in Dragon's Blood and Frankincense to soothe inflammation and lock in moisture. Would you like to know more about its ingredients?\"";
-
-                const el = {
-                    toggle: document.getElementById('tara-assistant-toggle'),
-                    panel: document.getElementById('tara-assistant-panel'),
-                    log: document.getElementById('tara-log'),
-                    form: document.getElementById('tara-form'),
-                    input: document.getElementById('tara-input')
-                };
-
-                let messages = [{ role: 'system', content: SYSTEM_PROMPT }];
-
-                function addBubble(text, who = 'assistant') {
-                    const wrap = document.createElement('div');
-                    wrap.style.margin = '8px 0';
-                    wrap.style.display = 'flex';
-                    wrap.style.justifyContent = who === 'assistant' ? 'flex-start' : 'flex-end';
-                    const b = document.createElement('div');
-                    b.textContent = text;
-                    b.style.maxWidth = '78%';
-                    b.style.padding = '10px 12px';
-                    b.style.borderRadius = '12px';
-                    b.style.background = who === 'assistant' ? '#ffffff' : '#e2e8f0';
-                    b.style.boxShadow = '0 2px 8px rgba(0,0,0,.06)';
-                    wrap.appendChild(b);
-                    el.log.appendChild(wrap);
-                    el.log.scrollTop = el.log.scrollHeight;
-                }
-
-                el.toggle.onclick = () => {
-                    el.panel.style.display = el.panel.style.display === 'none' ? 'block' : 'none';
-                    if (el.panel.style.display === 'block' && el.log.childElementCount === 0) {
-                        addBubble('Hi! I’m TARA Assistant. Want help choosing between our Everyday Skin Butter and Resin Repair Cream?');
-                    }
-                };
-
-                el.form.onsubmit = async (e) => {
-                    e.preventDefault();
-                    const q = el.input.value.trim();
-                    if (!q) return;
-                    el.input.value = '';
-                    messages.push({ role: 'user', content: q });
-                    addBubble(q, 'user');
-                    addBubble('…', 'assistant'); // typing indicator
-                    try {
-                        const res = await fetch('/chat', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ messages })
-                        });
-                        const data = await res.json(); // {reply: "...", messages:[...]} — shape your backend returns
-                        // remove last typing bubble
-                        el.log.removeChild(el.log.lastChild);
-                        addBubble(data.reply || 'Sorry, I could not get a response.');
-                        messages = data.messages || messages.concat({ role: 'assistant', content: data.reply });
-                    } catch (err) {
-                        el.log.removeChild(el.log.lastChild);
-                        addBubble('Sorry—something went wrong. Please try again or email support@taraholistic.beauty.');
-                    }
-                };
-            </script>
+                                                                el.form.onsubmit = async (e) => {
+                                                                    e.preventDefault();
+                                                                    const q = el.input.value.trim();
+                                                                    if (!q) return;
+                                                                    el.input.value = '';
+                                                                    messages.push({ role: 'user', content: q });
+                                                                    addBubble(q, 'user');
+                                                                    addBubble('…', 'assistant'); // typing indicator
+                                                                    try {
+                                                                        const res = await fetch('/chat', {
+                                                                            method: 'POST',
+                                                                            headers: { 'Content-Type': 'application/json' },
+                                                                            body: JSON.stringify({ messages })
+                                                                        });
+                                                                        const data = await res.json(); // {reply: "...", messages:[...]} — shape your backend returns
+                                                                        // remove last typing bubble
+                                                                        el.log.removeChild(el.log.lastChild);
+                                                                        addBubble(data.reply || 'Sorry, I could not get a response.');
+                                                                        messages = data.messages || messages.concat({ role: 'assistant', content: data.reply });
+                                                                    } catch (err) {
+                                                                        el.log.removeChild(el.log.lastChild);
+                                                                        addBubble('Sorry—something went wrong. Please try again or email support@taraholistic.beauty.');
+                                                                    }
+                                                                };
+                                                            </script>
 
 </body>
 
