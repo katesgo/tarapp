@@ -146,6 +146,12 @@ class ShoppingCart {
                     this.showNotification('Payment cancelled.');
                 }
             }).render('#paypal-button-container');
+        } else {
+            console.error('PayPal SDK not loaded');
+            const container = document.getElementById('paypal-button-container');
+            if (container) {
+                container.innerHTML = '<p class="text-red-500 text-sm text-center">PayPal is currently unavailable. Please try again later.</p>';
+            }
         }
     }
 
